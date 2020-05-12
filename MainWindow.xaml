@@ -1,0 +1,43 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Techno_s_WPF_Utilities"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="frmMain" x:Class="MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="{DynamicResource BrushBlack}">
+    <Window.Resources>
+        <SolidColorBrush x:Key="Brush1" Color="Black" />
+    </Window.Resources>
+    <Grid x:Name="mainGrid">
+        <Grid x:Name="masterGrid" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <syncfusion:CalendarEdit x:Name="calMonth" Grid.ColumnSpan="9" Margin="0" Grid.RowSpan="8" Width="Auto" Height="Auto" CalendarStyle="Vista" ShowWeekNumbers="True" Background="{DynamicResource Brush1}" Foreground="Lime" FontFamily="OCR A Extended" FontSize="18" SelectionBorderBrush="Pink" HeaderForeground="Lime" HeaderBackground="Black" AllowMultiplySelection="False" TodayRowIsVisible="True" IsShowWeekNumbers="True" IsAllowYearSelection="True" MaxWidth="800" MaxHeight="800" SelectedDayCellBackground="Black" SelectedDayCellBorderBrush="{DynamicResource BrushBlack}" SelectionForeground="{DynamicResource BrushPink}" />
+            <TextBlock x:Name="tbOutput" Grid.ColumnSpan="9" Margin="0" TextWrapping="Wrap" Text="Ready." Grid.RowSpan="9" Grid.Row="8" FontFamily="OCR A Extended" Foreground="{DynamicResource BrushLime}" FontSize="16" />
+        </Grid>
+    </Grid>
+</Window>
