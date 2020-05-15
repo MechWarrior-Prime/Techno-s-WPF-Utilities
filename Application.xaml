@@ -7,6 +7,7 @@
 
         <SolidColorBrush x:Key="BrushLime" Color="#FF48D432" />
         <SolidColorBrush x:Key="BrushBlack" Color="Black" />
-        <SolidColorBrush x:Key="BrushPink" Color="Black" />
+        <SolidColorBrush x:Key="BrushPink" Color="#FFF326EA" />
+        <SolidColorBrush x:Key="BrushOrange" Color="#FFF15122" />
     </Application.Resources>
 </Application>

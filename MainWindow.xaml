@@ -6,13 +6,15 @@
         xmlns:local="clr-namespace:Techno_s_WPF_Utilities"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" x:Name="frmMain" x:Class="MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="{DynamicResource BrushBlack}">
+        Title="Techno's WPF Utilities" Height="450" ResizeMode="CanMinimize" Width="800" Background="{DynamicResource BrushBlack}" ShowInTaskbar="False" FontFamily="OCR A Extended" FontSize="18">
     <Window.Resources>
         <SolidColorBrush x:Key="Brush1" Color="Black" />
     </Window.Resources>
     <Grid x:Name="mainGrid">
         <Grid x:Name="masterGrid" Margin="0">
             <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -36,8 +38,20 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <syncfusion:CalendarEdit x:Name="calMonth" Grid.ColumnSpan="9" Margin="0" Grid.RowSpan="8" Width="Auto" Height="Auto" CalendarStyle="Vista" ShowWeekNumbers="True" Background="{DynamicResource Brush1}" Foreground="Lime" FontFamily="OCR A Extended" FontSize="18" SelectionBorderBrush="Pink" HeaderForeground="Lime" HeaderBackground="Black" AllowMultiplySelection="False" TodayRowIsVisible="True" IsShowWeekNumbers="True" IsAllowYearSelection="True" MaxWidth="800" MaxHeight="800" SelectedDayCellBackground="Black" SelectedDayCellBorderBrush="{DynamicResource BrushBlack}" SelectionForeground="{DynamicResource BrushPink}" />
-            <TextBlock x:Name="tbOutput" Grid.ColumnSpan="9" Margin="0" TextWrapping="Wrap" Text="Ready." Grid.RowSpan="9" Grid.Row="8" FontFamily="OCR A Extended" Foreground="{DynamicResource BrushLime}" FontSize="16" />
+            <syncfusion:CalendarEdit x:Name="calMonth" Grid.ColumnSpan="10" Margin="0" Grid.RowSpan="8" Width="Auto" Height="Auto" ShowWeekNumbers="True" Background="{DynamicResource Brush1}" Foreground="Lime" FontFamily="OCR A Extended" FontSize="18" SelectionBorderBrush="Pink" HeaderForeground="Lime" HeaderBackground="Black" AllowMultiplySelection="True" TodayRowIsVisible="True"  IsShowWeekNumbers="True" IsAllowYearSelection="True" MaxWidth="800" MaxHeight="800" SelectedDayCellBackground="Black" SelectedDayCellBorderBrush="{DynamicResource BrushLime}" SelectionForeground="{DynamicResource BrushPink}" WeekNumberSelectionForeground="{DynamicResource BrushPink}" SelectedDayCellForeground="{DynamicResource BrushPink}" MinMaxHidden="False" VisualMode="All" TodayCellForeground="{DynamicResource BrushPink}" TodayCellBackground="{DynamicResource BrushBlack}" TodayCellBorderBrush="{DynamicResource BrushLime}" Grid.Row="1" IsTabStop="True" IsShowWeekNumbersGrid="True" MouseOverBackground="{DynamicResource BrushBlack}" SelectedDayCellHoverBackground="{DynamicResource BrushBlack}" MouseOverForeground="{DynamicResource BrushOrange}" TodayCellSelectedBackground="{DynamicResource BrushBlack}" TodayCellSelectedBorderBrush="{DynamicResource BrushLime}" WeekNumberHoverForeground="{DynamicResource BrushLime}" BorderBrush="{DynamicResource BrushLime}" />
+            <TextBlock x:Name="tbOutput" Grid.ColumnSpan="10" Margin="0" TextWrapping="Wrap" Text="Ready." Grid.RowSpan="3" Grid.Row="9" FontFamily="OCR A Extended" Foreground="{DynamicResource BrushLime}" FontSize="16" />
+            <StatusBar x:Name="sbTop" Grid.ColumnSpan="10" Margin="0" FontFamily="OCR A Extended" FontSize="14" Background="{DynamicResource BrushBlack}" Foreground="{DynamicResource BrushLime}">
+                <StatusBarItem x:Name="sbiMail" Width="90" HorizontalAlignment="Left">
+                    <Button x:Name="btnMail" Content="Mail" Padding="0,0,1,0" Background="{DynamicResource BrushBlack}" Foreground="{DynamicResource BrushLime}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" BorderBrush="{DynamicResource BrushBlack}" />
+                </StatusBarItem>
+                <StatusBarItem x:Name="sbiSay" Width="90" HorizontalAlignment="Left">
+                    <Button x:Name="btnSay" Content="Say" Padding="0,0,1,0" Background="{DynamicResource BrushBlack}" Foreground="{DynamicResource BrushLime}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" BorderBrush="{DynamicResource BrushBlack}" />
+                </StatusBarItem>
+                <Separator x:Name="Sep1" />
+                <StatusBarItem x:Name="sbiClock" HorizontalAlignment="Right" Padding="0,0,3,0" MinWidth="200">
+                    <Label x:Name="lblClock" Content="00:00:00" Foreground="{DynamicResource BrushLime}" HorizontalAlignment="Right" Padding="0" FontSize="22" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.IsSharedSizeScope="True" />
+                </StatusBarItem>
+            </StatusBar>
         </Grid>
     </Grid>
 </Window>
